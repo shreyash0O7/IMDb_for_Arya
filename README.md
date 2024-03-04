@@ -1,61 +1,40 @@
-# IMDb_for_Arya
+# The Impact of the MeToo Movement on IMDb Ratings
 
-<a name="_page0_x69.69_y423.22"></a>**IMDb Dataset Legend**
+The MeToo movement, initiated in 2006 by Tarana Burke and popularized on social media in 2017 by Alyssa Milano, has been a pivotal force in raising awareness about sexual harassment and assault, particularly in the entertainment industry. This GitHub project aims to analyze the impact of the MeToo movement on IMDb ratings, exploring whether the public's awareness and the subsequent industry changes have influenced the perception and reception of films and television shows.
 
-<Details>
+![Intro_slide](photos/Intro_slide.png)
 
-Each dataset is contained in a gzipped, tab-separated-values (TSV) formatted file in the UTF-8 character set. The first line in each file contains headers that describe what is in each column. A ‘\N’ is used to denote that a particular field is missing or null for that title/name. The available datasets are as follows:
+## Project Overview
 
-<a name="_page0_x60.71_y555.04"></a>**title.akas.tsv.gz**
+The primary goal of this project is to investigate how the MeToo movement has affected IMDb ratings. By analyzing a dataset of IMDb ratings before and after the movement gained widespread attention in 2017, we aim to identify any significant changes in the ratings of productions associated with individuals accused of sexual misconduct versus those that are not. This analysis seeks to understand the broader implications of social movements on public opinion and media consumption.
 
-- titleId (string) - a tconst, an alphanumeric unique identifier of the title
-- ordering (integer) – a number to uniquely identify rows for a given titleId
-- title (string) – the localized title
-- region (string) - the region for this version of the title
-- language (string) - the language of the title
-- types (array) - Enumerated set of attributes for this alternative title. One or more of the following: "alternative", "dvd", "festival", "tv", "video", "working", "original", "imdbDisplay". New values may be added in the future without warning
-- attributes (array) - Additional terms to describe this alternative title, not enumerated
-- isOriginalTitle (boolean) – 0: not original title; 1: original title <a name="_page1_x60.71_y183.54"></a>**title.basics.tsv.gz**
-- tconst (string) - alphanumeric unique identifier of the title
-- titleType (string) – the type/format of the title (e.g. movie, short, tvseries, tvepisode, video, etc)
-- primaryTitle (string) – the more popular title / the title used by the filmmakers on promotional materials at the point of release
-- originalTitle (string) - original title, in the original language
-- isAdult (boolean) - 0: non-adult title; 1: adult title
-- startYear (YYYY) – represents the release year of a title. In the case of TV Series, it is the series start year ![](Aspose.Words.6ef9d709-0a24-4a63-90ff-a7a4701c44f5.002.png) endYear (YYYY) – TV Series end year. ‘\N’ for all other title types ![](Aspose.Words.6ef9d709-0a24-4a63-90ff-a7a4701c44f5.003.png) runtimeMinutes – primary runtime of the title, in minutes ![](Aspose.Words.6ef9d709-0a24-4a63-90ff-a7a4701c44f5.004.png) genres (string array) – includes up to three genres associated with the title
+## Background and Significance
 
-<a name="_page1_x60.71_y549.05"></a>**title.crew.tsv.gz**
+The MeToo movement has had a profound impact on Hollywood, leading to the downfall of numerous high-profile figures and sparking a broader conversation about gender equity and workplace conduct. Studies have shown that the movement has led to tangible changes in the industry, including increased hiring of female writers and a shift in the types of stories being told. However, the movement has also faced criticism and backlash, with concerns about due process and the potential for overcorrection.
 
-- tconst (string) - alphanumeric unique identifier of the title
-- directors (array of nconsts) - director(s) of the given title
-- writers (array of nconsts) – writer(s) of the given title
+Given the entertainment industry's influence on culture and society, it is crucial to examine how these shifts have translated into audience reception. IMDb ratings, as a widely recognized measure of a film or show's popularity and critical reception, provide a valuable lens through which to view these impacts.
 
-<a name="_page1_x60.71_y680.87"></a>**title.episode.tsv.gz**
+## Methodology
 
-- tconst (string) - alphanumeric identifier of episode
-- parentTconst (string) - alphanumeric identifier of the parent TV Series
-- seasonNumber (integer) – season number the episode belongs to
-- episodeNumber (integer) – episode number of the tconst in the TV series
+Our analysis involves compiling IMDb ratings for a representative sample of productions released before and after 2017, categorized by their association with individuals accused of misconduct in the wake of the MeToo movement. We employ statistical methods to compare the average ratings across these categories, controlling for factors such as genre, budget, and star power to isolate the effect of the MeToo association.
 
-<a name="_page2_x60.71_y99.65"></a>**title.principals.tsv.gz**
+Additionally, we analyze audience reviews and comments to qualitatively assess changes in public sentiment, looking for patterns that may indicate a shift in how viewers engage with content related to the movement.
 
-- tconst (string) - alphanumeric unique identifier of the title
-- ordering (integer) – a number to uniquely identify rows for a given titleId
-- nconst (string) - alphanumeric unique identifier of the name/person
-- category (string) - the category of job that person was in
-- job (string) - the specific job title if applicable, else '\N'
-- characters (string) - the name of the character played if applicable, else '\N'
+## Preliminary Findings
 
-<a name="_page2_x60.71_y321.35"></a>**title.ratings.tsv.gz**
+Our initial analysis suggests a nuanced impact of the MeToo movement on IMDb ratings. While some productions associated with accused individuals have seen a decline in ratings, others have not experienced significant changes. This variability points to the complex ways in which audiences reconcile their views on art and the artist, as well as the influence of other factors such as the quality of the work itself and the presence of mitigating actions taken by the production to address the accusations.
 
-- tconst (string) - alphanumeric unique identifier of the title
-- averageRating – weighted average of all the individual user ratings
-- numVotes - number of votes the title has received
+Furthermore, our review of audience comments reveals a heightened awareness of gender issues and a greater willingness to engage in discussions about the ethical implications of supporting certain productions. This suggests that the MeToo movement has not only influenced industry practices but also shaped viewer consciousness and criteria for evaluating media.
 
-<a name="_page2_x60.71_y453.18"></a>**name.basics.tsv.gz**
+![rdd_everyone](photos/rdd_everyone.png)
 
-- nconst (string) - alphanumeric unique identifier of the name/person
-- primaryName (string)– name by which the person is most often credited
-- birthYear – in YYYY format
-- deathYear – in YYYY format if applicable, else '\N'
-- primaryProfession (array of strings)– the top-3 professions of the person
-- knownForTitles (array of tconsts) – titles the person is known for
+![rdd_female](photos/rdd_female.png)
+
+![rdd_male_leads](photos/rdd_male_leads.png)
+
+## Conclusion and Future Work
+
+The impact of the MeToo movement on IMDb ratings is multifaceted, reflecting the complex interplay between social movements, industry responses, and public opinion. Our findings contribute to a deeper understanding of how societal shifts influence media consumption and highlight the need for ongoing research in this area.
+
+Future work will expand our dataset, incorporate more sophisticated analytical techniques, and explore additional dimensions of the movement's impact, such as its effect on box office performance and critical acclaim. By continuing to examine these issues, we can gain further insights into the evolving relationship between social justice movements and the entertainment industry.
+---
