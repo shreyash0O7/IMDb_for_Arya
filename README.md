@@ -37,4 +37,5 @@ Furthermore, our review of audience comments reveals a heightened awareness of g
 The impact of the MeToo movement on IMDb ratings is multifaceted, reflecting the complex interplay between social movements, industry responses, and public opinion. Our findings contribute to a deeper understanding of how societal shifts influence media consumption and highlight the need for ongoing research in this area.
 
 Future work will expand our dataset, incorporate more sophisticated analytical techniques, and explore additional dimensions of the movement's impact, such as its effect on box office performance and critical acclaim. By continuing to examine these issues, we can gain further insights into the evolving relationship between social justice movements and the entertainment industry.
+
 ---
